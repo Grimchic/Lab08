@@ -21,3 +21,18 @@
 // Console.WriteLine("Ввод завершён");
 // Console.WriteLine($"Количество введённых оценок: {count}");
 
+int sum = 0;
+int count = 0;
+System.Console.WriteLine("Вводите оценки, для завершения введите -1:");
+int grade = int.Parse(Console.ReadLine());
+
+while (grade != -1)
+{
+    sum += grade;
+    count++;
+    grade = int.Parse(Console.ReadLine);
+}
+if (count > 0)
+{
+    System.Console.WriteLine($"Средний балл ");
+}
