@@ -21,18 +21,42 @@
 // Console.WriteLine("Ввод завершён");
 // Console.WriteLine($"Количество введённых оценок: {count}");
 
-int sum = 0;
-int count = 0;
-System.Console.WriteLine("Вводите оценки, для завершения введите -1:");
-int grade = int.Parse(Console.ReadLine());
+// int sum = 0;
+// int count = 0;
+// int maxGrade = int.MinValue;
 
-while (grade != -1)
-{
-    sum += grade;
-    count++;
-    grade = int.Parse(Console.ReadLine);
+// Console.WriteLine("Вводите оценки, для завершения введите -1:");
+// int grade = int.Parse(Console.ReadLine());
+
+// while (grade != -1) {
+//     sum += grade;
+//     count++;
+//     if (grade > maxGrade) {
+//         maxGrade = grade;
+//     }
+//     grade = int.Parse(Console.ReadLine());
+// }
+
+// if (count > 0) {
+//     Console.WriteLine($"Средний балл: {(double)sum / count}");
+//     Console.WriteLine($"Наибольшая оценка: {maxGrade}");
+// } else {
+//     Console.WriteLine("Оценок не было введено");
+// }
+string correctPassword = "qwerty123";
+int failedAttempts = 0;
+
+while (true) {
+    Console.Write("Введите пароль от личного кабинета: ");
+    string password = Console.ReadLine();
+
+    if (password == correctPassword) {
+        Console.WriteLine("Доступ разрешён");
+        Console.WriteLine($"Количество неудачных попыток: {failedAttempts}");
+        break;
+    }
+
+    Console.WriteLine("Неверный пароль, попробуйте снова");
+    failedAttempts++;
 }
-if (count > 0)
-{
-    System.Console.WriteLine($"Средний балл ");
-}
+
